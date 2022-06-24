@@ -18,6 +18,42 @@
           <code style="background-color: lightgray"><em>this</em></code> inside
           a function and execute it with the arguments provided.
         </li>
+        <li>
+          Syntax:
+          <code style="background-color: lightgray"
+            ><em>func.call(thisObj, args1, args2, ...)</em></code
+          >
+        </li>
+        <li>
+          Where:
+          <ul>
+            <li>
+              <strong>func</strong> is a function that needs to be invoked with
+              a different
+              <code style="background-color: lightgray"><em>this</em></code>
+              object.
+            </li>
+            <li>
+              <strong>thisObj</strong> is an object or a value that needs to be
+              replaced with the
+              <code style="background-color: lightgray"><em>this</em></code>
+              keyword present inside the function
+              <code style="background-color: lightgray"><em>func</em></code>
+            </li>
+            <li>
+              <strong>args1, args2</strong> are arguments that are passed to the
+              invoking function with the changed
+              <code style="background-color: lightgray"><em>this</em></code>
+              object.
+            </li>
+          </ul>
+          <p>
+            Note that if you invoke a function without any
+            <code style="background-color: lightgray"><em>thisObj</em></code>
+            argument, then JavaScript considers this property to be a global
+            object.
+          </p>
+        </li>
       </ol>
     </li>
     <li>
@@ -26,10 +62,55 @@
       The only difference is that in
       <code style="background-color: lightgray"><em>apply</em></code> you can
       pass an array as an argument list.
+    </li>
+    <li>
+      In apply, arguments you can pass an argument as an array literal or a new
+      array object.
+    </li>
+    <li>
+      Syntax:
+      <code style="background-color: lightgray"
+        ><em> func.apply(thisObj, armentsArray)</em></code
+      >
+    </li>
+
+    <li>
+      Where,
       <ol>
-        <li></li>
-        <li></li>
-        <li></li>
+        <li>
+          <strong>func</strong> is a function that needs to be invoked with a
+          different
+          <code style="background-color: lightgray"><em>this</em></code> object.
+        </li>
+        <li>
+          <strong>thisObj</strong> is an object or a value that needs to be
+          replaced with the
+          <code style="background-color: lightgray"><em>this</em></code> keyword
+          present inside the function
+          <code style="background-color: lightgray"><em>func</em></code>
+        </li>
+        <li>
+          <strong>argumentsArray</strong> can be an array of arguments, array
+          object, or the arguments keyword itself.
+        </li>
+        <li>
+          The first syntax:
+          <code style="background-color: lightgray"
+            ><em>func.apply(thisObj, [args1, args2, ...])</em></code
+          >
+        </li>
+        <li>
+          The second syntax:
+          <code style="background-color: lightgray"
+            ><em>func.apply(thisObj, new Array(args1, args2));</em></code
+          >
+        </li>
+        <li>
+          The third syntax:
+          <code style="background-color: lightgray"
+            ><em>func.apply(thisObj, arguments);</em></code
+          >
+        </li>
       </ol>
     </li>
     <li>
