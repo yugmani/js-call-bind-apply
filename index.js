@@ -86,3 +86,27 @@ function driverFunc() {
 
 driverFunc();
 // this.x = 21
+
+// How to Use the Bind Function in JavaScript
+// ***********************************************
+import React from 'react';
+
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      counter: 1,
+    };
+
+    //bind this function
+    this.handleCode = this.handleCode.bind(this);
+  }
+
+  handleCode() {
+    console.log('Handle code this = ', this.state);
+  }
+
+  render() {
+    return <button onClick={this.handleCode}>Click Me</button>;
+  }
+}
